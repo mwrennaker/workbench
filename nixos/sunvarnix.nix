@@ -7,9 +7,15 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Bootloader
+  boot.loader = {
+	efi.canTouchEfiVariables = true;
+	grub = {
+	    enable = true;
+	    efiSupport = true;
+	    device = "nodev";
+	};
+    };
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "sunvarPC"; # Define your hostname.
@@ -109,7 +115,7 @@
     obsidian
     git
     signal-desktop
-
+    efibootmgr
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
