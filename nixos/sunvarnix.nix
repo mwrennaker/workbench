@@ -17,6 +17,7 @@
 	};
     };
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [ "amdgpu.dc=1" "amdgpu.color_range=0" "amdgpu.deep_color=0" ]; #hopefully a workaround to help my monitor for now
 
   networking.hostName = "sunvarPC"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -46,10 +47,17 @@
     variant = "";
   };
 
-  # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
+/*
+  # Enable the Cosmic Desktop Environment.
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic = {
+    enable = true;
+    #xwayland.enable = false; one can dream
+    #excludePackages = [ "" ];
+  };
+*/
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -76,7 +84,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
     ];
   };
 
@@ -108,6 +115,16 @@
       };
   };
 
+ services.tailscale.enable = true;
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+
+  };
+
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
@@ -120,6 +137,10 @@
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
              "obsidian"
+             "steam"
+             "steam-original"
+             "steam-unwrapped"
+             "steam-run"
            ];
 
 
@@ -135,7 +156,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  programs.ssh.startAgent = true;
+  #programs.ssh.startAgent = true;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 8384 ];
