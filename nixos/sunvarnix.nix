@@ -38,7 +38,7 @@
   };
 
   # Experimental features
-  nix.settings.experimental-features = [ "nix-command" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -133,7 +133,8 @@
     git
     signal-desktop
     efibootmgr
-  ];
+    nerd-fonts.jetbrains-mono 
+ ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
              "obsidian"
