@@ -1,16 +1,12 @@
 {
-  description = "NixOS config flake for Sunvar";
-
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
+
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
   };
 
-  outputs = { nixpkgs, ... } @ inputs: 
-  {
-    nixosConfigurations.sunvarPC = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./sunvarnix.nix
-      ];
-    };  
-  };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 }
