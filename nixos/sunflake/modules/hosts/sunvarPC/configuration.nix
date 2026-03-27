@@ -136,6 +136,7 @@
     signal-desktop
     efibootmgr
     nerd-fonts.jetbrains-mono 
+    vintagestory
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
@@ -144,6 +145,7 @@
              "steam-original"
              "steam-unwrapped"
              "steam-run"
+             "vintagestory"
            ];
 
 
