@@ -58,7 +58,6 @@
     enable = true;
     #xwayland.enable = false; one can dream
     #excludePackages = [ "" ];
-    home-manager.url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   };
 */
   # Enable CUPS to print documents.
@@ -132,7 +131,6 @@
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     vim
-    home-manager.url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
     obsidian
     git
     signal-desktop
@@ -167,7 +165,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-    home-manager.url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   system.stateVersion = "25.11"; # Did you read the comment?
 
 };

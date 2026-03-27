@@ -5,7 +5,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
-    home-manager.url = "github:nix-community/home-manager";
  
    };
 
