@@ -12,7 +12,6 @@
       self.nixosModules.de
       self.nixosModules.audio
       self.nixosModules.steam
-      self.nixosModules.sway
     ];
 
   # Bootloader
