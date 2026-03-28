@@ -71,11 +71,18 @@
     nerd-fonts.jetbrains-mono 
     vintagestory
   ];
-
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.extraSpecialArgs = { inherit inputs; };
-  home-manager.users.sunvar = import ../../../home/sunvar.nix;
+  
+  homeConfigurations.sunvar = home-manager.lib.homeManagerConfiguration {
+    pkgs = import nixpkgs { system = "x86_64-linux"; };
+    modules = [
+      inputs.self.homeModules.de
+      {
+        home.username = "sunvar";
+	home.homeDirectory = "/home/sunvar";
+	home.stateVersion = "25.11";
+      };
+    ];
+  };
 
   services.openssh.enable = true;
 

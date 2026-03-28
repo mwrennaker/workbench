@@ -6,6 +6,7 @@
     import-tree.url = "github:vic/import-tree";
 
     home-manager.url = "github:nix-community/home-manager"; 
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
    };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
