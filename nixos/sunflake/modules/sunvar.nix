@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   imports = [
-   features/de.nix
+    homeModules.de
   ];
   home.username = "sunvar";
   home.homeDirectory = "/home/sunvar";
