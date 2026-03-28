@@ -72,6 +72,14 @@
     vintagestory
   ];
 
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { 
+    inherit inputs;
+    homeModules = [ self.homeModules.de ];
+  };
+  home-manager.users.sunvar = import ../../../home/sunvar.nix;
+
   services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
