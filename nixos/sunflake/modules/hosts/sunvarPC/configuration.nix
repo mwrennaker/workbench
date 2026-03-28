@@ -12,7 +12,7 @@
       self.nixosModules.de
       self.nixosModules.audio
       self.nixosModules.steam
-      inputs.home-manager.nixosModules.home-manger
+      inputs.home-manager.nixosModules.home-manager
     ];
 
   # Bootloader
