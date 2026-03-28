@@ -75,7 +75,7 @@
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { inherit inputs; 
     homeModules = {
-      de = "{$self}/modules/features/de.nix";
+      de = "../../features/de.nix";
     };
   };
   home-manager.users.sunvar = import ../../sunvar.nix;
