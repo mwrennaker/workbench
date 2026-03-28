@@ -9,7 +9,6 @@
     group = "users";
     dataDir = "/home/sunvar";  # default location for new folders
     configDir = "/home/sunvar/.config/syncthing";
-    networking.firewall.allowedTCPPorts = [ 8384 ];
     settings.gui = {
       user = "sunvar";
       };
@@ -28,6 +27,7 @@
 
       };
   };
+  networking.firewall.allowedTCPPorts = [ 8384 ]; #opening port for gui
 
   };
 
