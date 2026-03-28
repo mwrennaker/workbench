@@ -8,6 +8,8 @@
     [
       self.nixosModules.sunvarPCHardware
       self.nixosModules.syncthing
+      self.nixosModules.x11
+
     ];
 
   # Bootloader
@@ -42,13 +44,6 @@
 
   # Experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.xkb = {  # Configure keymap in X11
-    layout = "us";
-    variant = "";
-  };
 
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
