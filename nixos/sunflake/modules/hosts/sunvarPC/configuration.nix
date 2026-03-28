@@ -12,6 +12,7 @@
       self.nixosModules.de
       self.nixosModules.audio
       self.nixosModules.steam
+      self.nixosModules.sway
     ];
 
   # Bootloader
@@ -72,9 +73,13 @@
     efibootmgr
     nerd-fonts.jetbrains-mono 
     vintagestory
+    ghostty
   ];
 
-
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { inherit inputs; };
+  home-manager.users.sunvar = import ../../../sunvar.nix;
 
   services.openssh.enable = true;
 
