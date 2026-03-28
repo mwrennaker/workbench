@@ -18,6 +18,7 @@
         modifier = "Mod4";
         terminal = "ghostty";
 	
+        bars = { };
 	output = {
 	  "DP-2" = { position = "0 0"; scale = "2"; };
 	  "HDMI-A-2" = { position = "1920 0"; };
