@@ -18,6 +18,11 @@
       config  = rec { # rec makes recursive so you can referance say mod as {#modifier} instead of writing the key
         modifier = "Mod4";
         terminal = "ghostty";
+	
+	output = {
+	  "DP-2" = { position = "0 0"; };
+	  "HDMI-A-2" = { position = "3840 0"; };
+	};
 
       };
     };
