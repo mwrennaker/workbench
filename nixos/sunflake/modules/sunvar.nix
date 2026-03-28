@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   imports = [
-    self.homeModules.sway
+    self.homeModules.de
   ];
   home.username = "sunvar";
   home.homeDirectory = "/home/sunvar";
