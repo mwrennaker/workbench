@@ -13,18 +13,20 @@
   flake.homeModules.de = { pkgs, lib, config, ... }: {
     wayland.windowManager.sway = {
       enable = true;
-      home.packages = [ pkgs.ghostty ];
       wrapperFeatures.gtk = true;
       config  = rec { # rec makes recursive so you can referance say mod as {#modifier} instead of writing the key
         modifier = "Mod4";
         terminal = "ghostty";
 	
 	output = {
-	  "DP-2" = { position = "0 0"; };
-	  "HDMI-A-2" = { position = "3840 0"; };
+	  "DP-2" = { position = "0 0"; scale = "2"; };
+	  "HDMI-A-2" = { position = "1920 0"; };
 	};
 
       };
     };
+
+    home.packages = [ pkgs.ghostty ];
+
   };
 }
