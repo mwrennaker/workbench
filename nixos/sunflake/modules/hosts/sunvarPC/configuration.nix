@@ -74,7 +74,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { inherit inputs; };
-  home-manager.users.sunvar = import ../../home/sunvar.nix;
+  home-manager.users.sunvar = import ../../../home/sunvar.nix;
 
   services.openssh.enable = true;
 
