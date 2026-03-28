@@ -2,13 +2,6 @@
   flake.nixosModules.de = { pkgs, lib, config, ... }: {
 
   programs.regreet.enable = true;
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      command = "${pkgs.greetd.regreet}/bin/regreet";
-      user = "greeter";
-    };
-  };
 
    security.polkit.enable = true; # allows communication with protected files under restrictions without sudo
    programs.sway.enable = true;
