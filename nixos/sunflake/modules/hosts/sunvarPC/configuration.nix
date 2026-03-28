@@ -49,9 +49,6 @@
     isNormalUser = true;
     description = "Martin";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
   };
 
   # Experimental features
@@ -72,13 +69,12 @@
     efibootmgr
     nerd-fonts.jetbrains-mono 
     vintagestory
-    ghostty
   ];
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { inherit inputs self; };
-  home-manager.users.sunvar = import ../../../sunvar.nix;
+  home-manager.users.sunvar = import ../../sunvar.nix;
 
   services.openssh.enable = true;
 
