@@ -36,6 +36,16 @@
 	  titlebar = false;
 	  hideEdgeBorders = "smart";
 	};
+
+	gaps = {
+	  inner = 4;
+	  outer = 4;
+	  smartGaps = true;
+	};
+	
+	startup = [
+	  { command = "noctalia-shell"; }
+	];
       };
     };
 
