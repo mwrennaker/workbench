@@ -38,9 +38,8 @@
 	};
 
 	gaps = {
-	  inner = 4;
-	  outer = 4;
-	  smartGaps = true;
+	  inner = 8;
+	  outer = 8;
 	};
 	
 	startup = [
