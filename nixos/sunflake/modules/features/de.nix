@@ -14,16 +14,29 @@
     wayland.windowManager.sway = {
       enable = true;
       wrapperFeatures.gtk = true;
+      xwayland = true;
       config  = rec { # rec makes recursive so you can referance say mod as {#modifier} instead of writing the key
         modifier = "Mod4";
         terminal = "ghostty";
 	
         bars = [ ];
+
+        
 	output = {
 	  "DP-2" = { position = "0 0"; scale = "2"; };
 	  "HDMI-A-2" = { position = "1920 0"; };
 	};
-
+        
+	workspaceOutputAssign = [
+ 	 { workspace = "1"; output = "DP-2"; }
+ 	 { workspace = "2"; output = "HDMI-A-2"; }
+	];
+	
+	window = {
+	  border = 2;
+	  titlebar = false;
+	  hideEdgeBorders = "smart";
+	};
       };
     };
 
