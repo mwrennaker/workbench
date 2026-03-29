@@ -20,7 +20,6 @@
         terminal = "ghostty";
 	
         bars = [ ];
-
         
 	output = {
 	  "DP-2" = { position = "0 0"; scale = "2"; };

@@ -12,6 +12,7 @@
       self.nixosModules.de
       self.nixosModules.audio
       self.nixosModules.steam
+      self.nixosModules.noctalia
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -76,7 +77,10 @@
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { 
     inherit inputs;
-    homeModules = [ self.homeModules.de ];
+    homeModules = [ 
+      self.homeModules.de
+      self.homeModules.noctalia
+    ];
   };
   home-manager.users.sunvar = import ../../../home/sunvar.nix;
 
