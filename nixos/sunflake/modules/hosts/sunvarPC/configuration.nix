@@ -73,6 +73,7 @@
     vintagestory
     fastfetch
     wallust
+    broot
   ];
 
   home-manager.useGlobalPkgs = true;
