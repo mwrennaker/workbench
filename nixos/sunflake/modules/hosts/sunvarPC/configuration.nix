@@ -72,6 +72,7 @@
     nerd-fonts.jetbrains-mono 
     vintagestory
     fastfetch
+    wallust
   ];
 
   home-manager.useGlobalPkgs = true;
