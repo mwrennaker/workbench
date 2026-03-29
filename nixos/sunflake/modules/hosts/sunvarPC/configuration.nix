@@ -71,6 +71,7 @@
     efibootmgr
     nerd-fonts.jetbrains-mono 
     vintagestory
+    fastfetch
   ];
 
   home-manager.useGlobalPkgs = true;

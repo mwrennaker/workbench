@@ -16,7 +16,7 @@
     ];
     programs.noctalia-shell = {
       enable = true;
-
+      settings = ".noctalia.json";
     }; 
 
   };
