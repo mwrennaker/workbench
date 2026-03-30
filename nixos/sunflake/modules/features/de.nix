@@ -54,7 +54,7 @@
         font-family = "JetBrainsMono Nerd Font";
 	font-size = 12;
 	background-opacity = 0.75;
-	theme = "bright-lights";
+	theme = "Bright Lights";
       };
     };
   };
