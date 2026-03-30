@@ -76,7 +76,7 @@
       };
     };
 
-    xdg.usersDir = {
+    xdg.userDirs = {
       enable = true;
       createDirectories = false;
       desktop = "$HOME/countertop/desk";
