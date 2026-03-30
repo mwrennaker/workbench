@@ -15,6 +15,12 @@
       enable = true;
       wrapperFeatures.gtk = true;
       xwayland = true;
+      extraConfig = ''
+        unbindsym Mod4+Space;
+	unbindsym Mod4+s;
+	unbindsym Mod4+w;
+	unbindsym Mod4+a;
+      '';
       config  = rec { # rec makes recursive so you can referance say mod as {#modifier} instead of writing the key
         modifier = "Mod4";
         terminal = "ghostty";
@@ -49,11 +55,6 @@
 	keybindings = let mod = modifier; in lib.mkOptionDefault {
 	  "${mod}+Return" = "exec ghostty";
 	  "${mod}+Shift+q" = "kill";
-
-	  "${mod}+s" = "null";
-	  "${mod}+w" = "null";
-	  "${mod}+Space" = "null";
-	  "${mod}+a" = "null";
 
 	  "${mod}+d" = "exec qs -c noctalia-shell ipc call launcher toggle"; 
 
