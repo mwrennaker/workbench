@@ -4,6 +4,7 @@
     stylix = {
       enable = true;
       base16Scheme = ../themes/bright-lights.yaml;
+      targets.gtk.enable = true;
     };
   };
 

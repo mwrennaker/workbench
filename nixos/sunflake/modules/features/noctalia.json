@@ -677,7 +677,7 @@
     "manualSunset": "18:30",
     "generationMethod": "faithful",
     "monitorForColors": "DP-2",
-    "syncGsettings": true
+    "syncGsettings": false
   },
   "templates": {
     "activeTemplates": [],

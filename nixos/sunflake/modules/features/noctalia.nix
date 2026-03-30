@@ -17,9 +17,18 @@
     programs.noctalia-shell = {
       enable = true;
     }; 
-    home.file.".config/noctalia/config.json" = {
-      text = builtins.toJSON (builtins.fromJSON (builtins.readFile ./noctalia.json));
-    };
-
+    xdg.configFile."noctalia/config.json" = {
+    force = true;
+    text = builtins.toJSON (
+      (builtins.fromJSON (builtins.readFile ./noctalia.json))
+      // {
+        colorSchemes = {
+          useWallpaperColors = false;
+          syncGsettings = false;  # let stylix own gtk
+          darkMode = true;
+        };
+      }
+    );
+  };
   };
 }
