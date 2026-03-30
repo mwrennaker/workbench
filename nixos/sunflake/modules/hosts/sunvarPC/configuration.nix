@@ -73,7 +73,6 @@
     nerd-fonts.jetbrains-mono 
     vintagestory
     fastfetch
-    wallust
     broot
   ];
 

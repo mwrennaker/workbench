@@ -19,16 +19,7 @@
     }; 
     xdg.configFile."noctalia/config.json" = {
     force = true;
-    text = builtins.toJSON (
-      (builtins.fromJSON (builtins.readFile ./noctalia.json))
-      // {
-        colorSchemes = {
-          useWallpaperColors = false;
-          syncGsettings = false;  # let stylix own gtk
-          darkMode = true;
-        };
-      }
-    );
-  };
+    source = pkgs.writeText "noctalia-config" (builtins.toJSON (
+    (builtins.fromJSON (builtins.readFile ./noctalia.json));
   };
 }
