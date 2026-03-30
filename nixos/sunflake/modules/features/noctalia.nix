@@ -21,5 +21,6 @@
     force = true;
     source = pkgs.writeText "noctalia-config" (builtins.toJSON (
     (builtins.fromJSON (builtins.readFile ./noctalia.json))));
+    };
   };
 }
