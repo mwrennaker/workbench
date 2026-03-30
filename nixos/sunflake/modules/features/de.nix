@@ -81,7 +81,7 @@
       createDirectories = false;
       desktop = "$HOME/countertop/desk";
       documents = "$HOME/countertop";
-      downloads = "$HOME/quarantine";
+      download = "$HOME/quarantine";
       music = "$HOME/countertop/tunes";
       pictures = "$HOME/countertop/pics";
       publicShare = "$HOME/sync";
