@@ -17,7 +17,7 @@
     programs.noctalia-shell = {
       enable = true;
     }; 
-    xdg.configFile."noctalia/config.json" = {
+    xdg.configFile."noctalia/settings.json" = {
     force = true;
     source = pkgs.writeText "noctalia-config" (builtins.toJSON (
     (builtins.fromJSON (builtins.readFile ./noctalia.json))));
