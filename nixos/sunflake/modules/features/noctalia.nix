@@ -16,8 +16,10 @@
     ];
     programs.noctalia-shell = {
       enable = true;
-      settings = ".noctalia.json";
     }; 
+    home.file.".config/noctalia/config.json" = {
+      text = builtins.toJSON (builtins.fromJSON (builtins.readFile ./noctalia.json));
+    };
 
   };
 }
