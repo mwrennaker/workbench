@@ -45,6 +45,22 @@
 	startup = [
 	  { command = "noctalia-shell"; }
 	];
+
+	keybindings = let mod = modifier; in lib.mkOptionDefault {
+	  "${mod}+Return" = "exec ghostty";
+	  "${mod}+Shift+q" = "kill";
+
+	  "${mod}+s" = "null";
+	  "${mod}+w" = "null";
+	  "${mod}+Space" = "null";
+	  "${mod}+a" = "null";
+
+	  "${mod}+d" = "exec qs -c noctalia-shell ipc call launcher toggle"; 
+
+	  "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
+          "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
+	  "XF86AudioMute" = "exec noctalia-shell ipc call media playPause";
+	};
       };
     };
 
