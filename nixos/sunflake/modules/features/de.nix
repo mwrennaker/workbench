@@ -13,6 +13,7 @@
   flake.homeModules.de = { pkgs, lib, config, ... }: {
     wayland.windowManager.sway = {
       enable = true;
+      checkConfig = false;
       wrapperFeatures.gtk = true;
       xwayland = true;
       extraConfig = ''
