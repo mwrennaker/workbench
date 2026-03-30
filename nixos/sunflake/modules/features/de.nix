@@ -75,5 +75,18 @@
 	theme = "Bright Lights";
       };
     };
+
+    xdg.usersDir = {
+      enable = true;
+      createDirectories = false;
+      desktop = "$HOME/countertop/desk";
+      documents = "$HOME/countertop";
+      downloads = "$HOME/quarantine";
+      music = "$HOME/countertop/tunes";
+      pictures = "$HOME/countertop/pics";
+      publicShare = "$HOME/sync";
+      templates = "$HOME/dustycloset/templates";
+      videos = "$HOME/countertop/clips";
+    };
   };
 }
