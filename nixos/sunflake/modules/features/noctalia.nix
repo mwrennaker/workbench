@@ -1,6 +1,6 @@
 { inputs, self, ... }: {
 
-  flake.nixosModules.noctalia = { pkgs, ... }: {
+  flake.nixosModules.noctalia = { pkgs, lib, ... }: {
     networking.networkmanager.enable = true;
     hardware.bluetooth.enable = true;
     
