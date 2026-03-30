@@ -1,0 +1,19 @@
+# modules/themes/bright-lights.yaml
+scheme: "Bright Lights"
+author: "Converted from Ghostty theme"
+base00: "191919"  # background
+base01: "252525"  # lighter background
+base02: "4c4c4c"  # selection background (bright black)
+base03: "6c6c6c"  # comments
+base04: "b3c9d7"  # dark foreground
+base05: "b3c9d7"  # foreground
+base06: "c2c8d7"  # light foreground
+base07: "c2c8d7"  # lightest foreground
+base08: "ff355b"  # red
+base09: "ffc251"  # orange
+base0A: "b7e876"  # yellow (using green here as VS doesn't have distinct orange/yellow split)
+base0B: "b7e876"  # green
+base0C: "6cbfb5"  # cyan
+base0D: "76d4ff"  # blue
+base0E: "ba76e7"  # purple/magenta
+base0F: "f34b00"  # cursor/brown

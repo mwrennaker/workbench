@@ -13,6 +13,7 @@
       self.nixosModules.audio
       self.nixosModules.steam
       self.nixosModules.noctalia
+      self.nixosModuels.stylix
       inputs.home-manager.nixosModules.home-manager
     ];
 
