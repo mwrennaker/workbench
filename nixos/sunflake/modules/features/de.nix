@@ -17,10 +17,10 @@
       wrapperFeatures.gtk = true;
       xwayland = true;
       extraConfig = ''
-        unbindsym Mod4+Space;
-	unbindsym Mod4+s;
-	unbindsym Mod4+w;
-	unbindsym Mod4+a;
+        unbindsym Mod4+Space
+	unbindsym Mod4+s
+	unbindsym Mod4+w
+	unbindsym Mod4+a
       '';
       config  = rec { # rec makes recursive so you can referance say mod as {#modifier} instead of writing the key
         modifier = "Mod4";
