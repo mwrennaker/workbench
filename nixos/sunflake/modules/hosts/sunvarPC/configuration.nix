@@ -74,6 +74,8 @@
     vintagestory
     fastfetch
     broot
+    wl-clipboard
+    cliphist
   ];
 
   home-manager.useGlobalPkgs = true;
