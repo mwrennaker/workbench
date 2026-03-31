@@ -61,6 +61,7 @@
   # Services
   services.printing.enable = true;
   services.tailscale.enable = true;
+  services.upower.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
