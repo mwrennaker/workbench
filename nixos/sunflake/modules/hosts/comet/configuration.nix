@@ -8,13 +8,6 @@
     [
       self.nixosModules.commonConfig
       self.nixosModules.cometHardware
-      self.nixosModules.syncthing
-      self.nixosModules.x11
-      self.nixosModules.de
-      self.nixosModules.audio
-      self.nixosModules.noctalia
-      self.nixosModules.stylix
-      inputs.home-manager.nixosModules.home-manager
     ];
 
   networking.hostName = "comet"; 

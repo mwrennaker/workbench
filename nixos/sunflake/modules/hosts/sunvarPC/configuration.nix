@@ -8,14 +8,6 @@
     [
       self.nixosModules.commonConfig
       self.nixosModules.sunvarPCHardware
-      self.nixosModules.syncthing
-      self.nixosModules.x11
-      self.nixosModules.de
-      self.nixosModules.audio
-      self.nixosModules.steam
-      self.nixosModules.noctalia
-      self.nixosModules.stylix
-      inputs.home-manager.nixosModules.home-manager
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
