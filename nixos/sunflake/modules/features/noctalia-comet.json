@@ -111,6 +111,15 @@
           "textColor": "none"
         },
         {
+          "deviceNativePath": "__default__",
+          "displayMode": "icon-hover",
+          "hideIfIdle": false,
+          "hideIfNotDetected": true,
+          "id": "Battery",
+          "showNoctaliaPerformance": true,
+          "showPowerProfiles": true
+        },
+        {
           "compactMode": true,
           "diskPath": "/",
           "iconColor": "none",
