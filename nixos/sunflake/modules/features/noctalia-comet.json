@@ -240,7 +240,7 @@
     ]
   },
   "general": {
-    "avatarImage": "/home/sunvar/.face",
+    "avatarImage": "/home/comet/workbench/profilePics/.face",
     "dimmerOpacity": 0.2,
     "showScreenCorners": false,
     "forceBlackScreenCorners": false,
@@ -350,7 +350,7 @@
   "wallpaper": {
     "enabled": true,
     "overviewEnabled": false,
-    "directory": "/home/sunvar/dustycloset/wallpapers/Space/",
+    "directory": "/home/comet/workbench/wallpapers/Space/",
     "monitorDirectories": [],
     "enableMultiMonitorDirectories": false,
     "showHiddenFiles": false,
