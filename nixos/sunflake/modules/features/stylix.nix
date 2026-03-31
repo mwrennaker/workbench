@@ -5,6 +5,7 @@
       enable = true;
       base16Scheme = ../themes/bright-lights.yaml;
       targets.gtk.enable = true;
+      polarity = "dark";
       cursor = {
 	package = pkgs.capitaine-cursors;
 	name = "capitaine-cursors";
