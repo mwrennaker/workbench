@@ -1,16 +1,16 @@
 { inputs, self, ... }: {
 
-  flake.nixosModules.syncthing = { pkgs, lib, config, ... }: {
+  flake.nixosModules.syncthing = { pkgs, lib, config, primaryUser, ... }: {
     
     services.syncthing = {
     enable = true;
     openDefaultPorts = true; # Open ports in the firewall for Syncthing. (NOTE: this will not open syncthing gui port)
-    user = "sunvar";
+    user = primaryUser;
     group = "users";
-    dataDir = "/home/sunvar";  # default location for new folders
-    configDir = "/home/sunvar/.config/syncthing";
+    dataDir = "/home/${primaryUser}";  # default location for new folders
+    configDir = "/home/${primaryUser}/.config/syncthing";
     settings.gui = {
-      user = "sunvar";
+      user = primaryUser;
       };
       settings = {
         devices = {
@@ -19,7 +19,7 @@
           folders = {
           "sunvar-pi" = {
             id = "7590-mwr";
-            path = "/home/sunvar/sync/sunvar-pi/";
+            path = "/home/${primaryUser}/sync/sunvar-pi/";
             devices = [ "sunvarpi" ];
             ignorePerms = true;
               };

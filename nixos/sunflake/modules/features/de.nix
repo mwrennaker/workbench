@@ -10,7 +10,7 @@
    
   };
   
-  flake.homeModules.de = { pkgs, lib, config, ... }: {
+  flake.homeModules.de = { pkgs, lib, config, outputs, ... }: {
     wayland.windowManager.sway = {
       enable = true;
       checkConfig = false;
@@ -28,10 +28,7 @@
 	
         bars = [ ];
         
-	output = {
-	  "DP-2" = { position = "0 0"; scale = "2"; };
-	  "HDMI-A-2" = { position = "1920 0"; };
-	};
+	output = outputs;
         
 	workspaceOutputAssign = [
  	 { workspace = "1"; output = "DP-2"; }

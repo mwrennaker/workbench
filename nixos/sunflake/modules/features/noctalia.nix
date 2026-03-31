@@ -10,7 +10,7 @@
 
   };  
  
-  flake.homeModules.noctalia = { pkgs, lib, ... }: {
+  flake.homeModules.noctalia = { pkgs, lib, noctaliaConfig, ... }: {
     imports = [
       inputs.noctalia.homeModules.default
     ];
@@ -20,7 +20,7 @@
     xdg.configFile."noctalia/settings.json" = lib.mkForce {
     force = true;
     source = pkgs.writeText "noctalia-config" (builtins.toJSON (
-    (builtins.fromJSON (builtins.readFile ./noctalia.json))));
+    (builtins.fromJSON (builtins.readFile noctaliaConfig))));
     };
   };
 }

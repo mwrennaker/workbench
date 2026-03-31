@@ -1,17 +1,16 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.sunvarPCConfiguration = 
+  flake.nixosModules.cometConfiguration = 
 { config, pkgs, ... }:
 
 {
   imports =
     [
-      self.nixosModules.sunvarPCHardware
+      self.nixosModules.cometHardware
       self.nixosModules.syncthing
       self.nixosModules.x11
       self.nixosModules.de
       self.nixosModules.audio
-      self.nixosModules.steam
       self.nixosModules.noctalia
       self.nixosModules.stylix
       inputs.home-manager.nixosModules.home-manager
@@ -26,10 +25,8 @@
           device = "nodev";
       };
     };
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "amdgpu.dc=1" "amdgpu.color_range=0" "amdgpu.deep_color=0" ]; #hopefully a workaround to help my monitor for now
 
-  networking.hostName = "sunvarPC"; # Define your hostname.
+  networking.hostName = "comet"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # time zone and internationalisation.
@@ -48,9 +45,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sunvar = {
+  users.users.comet = {
     isNormalUser = true;
-    description = "Martin";
+    description = "Comet";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
@@ -59,6 +56,7 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.firefox.enable = true; # firefox
+  programs.ssh.startAgent = true;
 
   # Services
   services.printing.enable = true;
@@ -82,17 +80,16 @@
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { 
     inherit inputs;
-    noctaliaConfig = ../../features/noctalia-sunvarPC.json;
+    noctaliaConfig = ../../features/noctalia-comet.json;
     outputs = {
-      "DP-2" = { position = "0 0"; scale = "2"; };
-      "HDMI-A-2" = { position = "1920 0"; };
+      "eDP-1" = { scale = "1"; };
     };
     homeModules = [ 
       self.homeModules.de
       self.homeModules.noctalia
     ];
   };
-  home-manager.users.sunvar = import ../../../home/sunvar.nix;
+  home-manager.users.comet = import ../../../home/comet.nix;
 
   services.openssh.enable = true;
 
