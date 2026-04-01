@@ -6,14 +6,9 @@
       imports = [ inputs.stylix.nixosModules.stylix ];
       stylix = {
         enable = true;
+        autoEnable = true;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
         targets.gtk.enable = true;
-        targets.neovim.enable = {
-          transparentBackground = {
-            main = true;
-            signColumn = true;
-          };
-        };
         polarity = "dark";
         cursor = {
           package = pkgs.bibata-cursors;
