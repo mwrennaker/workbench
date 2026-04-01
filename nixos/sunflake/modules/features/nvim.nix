@@ -12,7 +12,7 @@
 	clang-tools # c lsp
 	
 	# formatters
-	nixfmt-rfx-style # nix
+	nixfmt-rfc-style # nix
 	rustfmt # rust
 	clang-tools # c
 
