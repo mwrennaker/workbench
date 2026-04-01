@@ -36,6 +36,7 @@
     homeModules = [ 
       self.homeModules.de
       self.homeModules.noctalia
+      self.homeModules.nvim
     ];
   };
 
