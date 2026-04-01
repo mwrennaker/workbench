@@ -161,24 +161,26 @@
               })
             '';
           }
+          {
+            plugin = oxocarbon-nvim;
+            type = "lua";
+            config = ''
+              vim.opt.background = "dark"
+              vim.cmd.colorscheme "oxocarbon"
+              vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+              vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+              vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+            '';
+          }
         ];
 
         extraLuaConfig = ''
-
-        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-  	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-  	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-  	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-  	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-
           -- leader
           vim.g.mapleader      = " "
           vim.g.maplocalleader = " "
 
           -- appearance
-          vim.opt.termguicolors  = true
+          vim.opt.termguicolors  = false
           vim.opt.number         = true
           vim.opt.relativenumber = true
           vim.opt.wrap           = false
