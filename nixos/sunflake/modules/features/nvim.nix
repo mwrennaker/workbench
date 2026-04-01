@@ -161,20 +161,17 @@
               })
             '';
           }
-          oxocarbon-nvim
         ];
 
         extraLuaConfig = ''
 
-          -- load oxocarbon theme with transparency
-          require("oxocarbon").setup({
-            transparent = true;
-          })
-          vim.cmd.colorscheme("oxocarbon")
-
-           -- Ensure all backgrounds are transparent
-          vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-          vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+  	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+  	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+  	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+  	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
           -- leader
           vim.g.mapleader      = " "
