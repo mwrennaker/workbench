@@ -22,13 +22,6 @@
         # Treesitter
         {
           plugin = nvim-treesitter.withAllGrammars;
-          type = "lua";
-          config = ''
-            require("nvim-treesitter.configs").setup({
-              highlight = { enable = true },
-              indent = { enable = true },
-            })
-          '';
         }
 
         # LSP
