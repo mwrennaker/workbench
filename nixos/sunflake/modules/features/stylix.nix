@@ -3,7 +3,7 @@
     imports = [ inputs.stylix.nixosModules.stylix ];
     stylix = {
       enable = true;
-      base16Scheme = ../themes/bright-lights.yaml;
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
       targets.gtk.enable = true;
       polarity = "dark";
       cursor = {
