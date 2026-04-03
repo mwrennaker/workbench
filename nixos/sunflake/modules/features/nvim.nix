@@ -22,7 +22,7 @@
           nixfmt-rfc-style # nix
           rustfmt # rust
           clang-tools # c
-          pyton3Packages.pylint # python linter
+          python3Packages.pylint # python linter
           python3Packages.black # python formatter
           python3Packages.isort # python import organizer
 
