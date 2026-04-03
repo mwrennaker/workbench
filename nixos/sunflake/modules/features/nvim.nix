@@ -180,7 +180,7 @@
           vim.g.maplocalleader = " "
 
           -- appearance
-          vim.opt.termguicolors  = false
+          vim.opt.termguicolors  = true
           vim.opt.number         = true
           vim.opt.relativenumber = true
           vim.opt.wrap           = false
