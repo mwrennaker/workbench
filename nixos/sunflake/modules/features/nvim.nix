@@ -9,15 +9,22 @@
         vimAlias = true;
         viAlias = true;
         extraPackages = with pkgs; [
+          git
           # LSPs
           nil # nix lsp
           rust-analyzer # rust lsp
           clang-tools # c lsp
+          pyright # python lsp
+
+          python3 # python interpreter
 
           # formatters
           nixfmt-rfc-style # nix
           rustfmt # rust
           clang-tools # c
+          pyton3Packages.pylint # python linter
+          python3Packages.black # python formatter
+          python3Packages.isort # python import organizer
 
           gcc # for treesitter at runtime
         ];
@@ -43,10 +50,12 @@
                 },
               })
               vim.lsp.config("clangd", {})
+              vim.lsp.config("pyright", {})
 
               vim.lsp.enable("nil_ls")
               vim.lsp.enable("rust_analyzer")
               vim.lsp.enable("clangd")
+              vim.lsp.enable("pyright")
             '';
           }
 
@@ -110,6 +119,7 @@
                   nix  = { "nixfmt" },
                   rust = { "rustfmt" },
                   c    = { "clang_format" },
+                  python = { "black", "isort" },
                 },
                 format_on_save = {
                   timeout_ms = 500,
