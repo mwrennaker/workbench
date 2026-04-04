@@ -27,35 +27,6 @@
 
         };
 
-        initExtra = ''
-          # put functions here
-          nixFlakeFeat() {
-          if [ -z "$1" ]; then
-            echo "Usage: nixmod <name> [path/to/dir]"
-            return 1
-          fi
-
-          local name="$1"
-          local dir="${2:-.}"  # defaults to current directory if no second arg
-          local file="$dir/${name}.nix"
-
-         if [ -f "$file" ]; then
-            echo "Error: $file already exists"
-           return 1
-          fi
-
-          cat > "$file" << EOF
-        { inputs, self, ... }: {
-         flake.nixosModules.${name} = { ... }: {
-            #start here
-          };
-        }
-        EOF
-
-          echo "Created $file"
-        }
-      '';
-
         sessionVariables = {
           # used for ssh agent for managing private keys
           SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent";
