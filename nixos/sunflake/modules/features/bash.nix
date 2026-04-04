@@ -68,9 +68,9 @@
             local staged=$(git diff --cached --numstat 2>/dev/null | wc -l)
             local unstaged=$(git diff --numstat 2>/dev/null | wc -l)
 
-            echo -n " \[\e[33m\]> $branch\[\e[0m\]"
-            [ $staged -gt 0 ] && echo -n " \[\e[32m\]> +$staged\[\e[0m\]"
-            [ $unstaged -gt 0 ] && echo -n " \[\e[31m\]: !$unstaged\[\e[0m\]"
+            echo -n " \[\e[33m\]$branch\[\e[0m\]"
+            [ $staged -gt 0 ] && echo -n " \[\e[32m\]+$staged\[\e[0m\]"
+            [ $unstaged -gt 0 ] && echo -n " \[\e[31m\]!$unstaged\[\e[0m\]"
           }
 
           # Dynamic exit status color
@@ -87,8 +87,8 @@
               local parse_git=$(__parse_git)
               local exit_colored=$(__exit_colored)
 
-              PS1="\[\e[36m\]┌[\[\e[32m\]\u\[\e[36m\]@\[\e[35m\]\H\[\e[36m\]]-[\[\e[34m\]\w\[\e[36m\]]$parse_git\[\e[0m\]\n"
-              PS1+="\[\e[36m\]└─[$exit_colored\[\e[36m\]]>\[\e[0m\] "
+              PS1="\[\e[36m\]┌\[\e[32m\]\u\[\e[36m\]󰬯\[\e[35m\]\H\[\e[36m\]\[\e[34m\]\w\[\e[36m\]$parse_git\[\e[0m\]\n"
+              PS1+="\[\e[36m\]└─$exit_colored\[\e[36m\]󰿅\[\e[0m\] "
             }
 
             PROMPT_COMMAND="__set_prompt"

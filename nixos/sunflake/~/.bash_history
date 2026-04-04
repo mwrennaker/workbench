@@ -68,3 +68,7 @@ vim nixos/sunflake/modules/features/bash.nix
 nixsw
 vim modules/features/bash.nix 
 nixsw
+cd workbench/
+cd nixos/
+vim sunflake/modules/features/bash.nix 
+nixsw
