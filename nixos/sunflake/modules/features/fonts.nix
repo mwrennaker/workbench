@@ -25,7 +25,7 @@
       fonts.packages = with pkgs; [
         # Noto
         noto-fonts
-        noto-fonts-cjk
+        noto-fonts-cjk-sans
         noto-fonts-emoji
 
         # DM
