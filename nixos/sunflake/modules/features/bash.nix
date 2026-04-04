@@ -29,11 +29,11 @@
 
         sessionVariables = {
           # used for ssh agent for managing private keys
-          SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent";
+          SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/ssh-agent";
 
           EDITOR = "nvim";
           VISUAL = "nvim";
-          
+
           # XDG vars
           XDG_CONFIG_HOME = "$HOME/.config";
           XDG_CACHE_HOME = "$HOME/.cache";
@@ -47,23 +47,23 @@
         # logoutExtra = '''';
 
         bashrcExtra = ''
-        # .bashrc
+          # .bashrc
 
-        # Source global definitions
-        if [ -f /etc/bashrc ]; then
-          . /etc/bashrc
-        fi
+          # Source global definitions
+          if [ -f /etc/bashrc ]; then
+            . /etc/bashrc
+          fi
 
-        # User specific environment
-        if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-          PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-        fi
-        export PATH
+          # User specific environment
+          if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+            PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+          fi
+          export PATH
 
-        # Custom Prompt (PS1)
-        PS1='\[\e[36m\]$?\[\e[0m\] \[\e[92m\]\u󰞦\[\e[95m\]\H\[\e[0m\] \[\e[95m\]>\[\e[0m\] \[\e[94m\]\w\[\e[0m\] \[\e[95m\]<\[\e[0m\] \[\e[94m\]\A\[\e[0m\] \[\e[95m\]>\[\e[0m\] '";
+          # Custom Prompt (PS1)
+          PS1='\[\e[36m\]$?\[\e[0m\] \[\e[92m\]\u󰞦\[\e[95m\]\H\[\e[0m\] \[\e[95m\]>\[\e[0m\] \[\e[94m\]\w\[\e[0m\] \[\e[95m\]<\[\e[0m\] \[\e[94m\]\A\[\e[0m\] \[\e[95m\]>\[\e[0m\] '";
 
-        ''
+        '';
       };
 
     };
