@@ -61,3 +61,10 @@ vim modules/hosts/sunvarPC/configuration.nix
 vim home/sunvar.nix 
 vim modules/features/bash.nix 
 nixsw
+ls
+cd workbench/
+ls
+vim nixos/sunflake/modules/features/bash.nix 
+nixsw
+vim modules/features/bash.nix 
+nixsw
