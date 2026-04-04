@@ -13,6 +13,7 @@
         self.nixosModules.audio
         self.nixosModules.noctalia
         self.nixosModules.stylix
+        self.nixosModules.fonts
         inputs.home-manager.nixosModules.home-manager
       ];
 
@@ -44,8 +45,6 @@
         cliphist
         ripgrep
 
-        # fonts
-        nerd-fonts.jetbrains-mono
       ];
 
       # Common programs
