@@ -9,8 +9,5 @@
         dedicatedServer.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
       };
-      environment.sessionVariables = {
-        STEAM_FORCE_DESKTOPUI_SCALING = "1";
-      };
     };
 }
