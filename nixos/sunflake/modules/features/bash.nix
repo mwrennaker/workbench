@@ -70,7 +70,7 @@
 
             echo -n " \[\e[33m\]> $branch\[\e[0m\]"
             [ $staged -gt 0 ] && echo -n " \[\e[32m\]> +$staged\[\e[0m\]"
-            [ $unstaged -gt 0 ] && echo -n " \[\e[31m\]!$unstaged\[\e[0m\]"
+            [ $unstaged -gt 0 ] && echo -n " \[\e[31m\]: !$unstaged\[\e[0m\]"
           }
 
           # Dynamic exit status color
