@@ -73,3 +73,11 @@ cd nixos/
 vim sunflake/modules/features/bash.nix 
 nixsw
 for i in {0..15}; do      printf "\e[48;5;${i}m %3d \e[0m" $i;     [ $((i % 8)) -eq 7 ] && echo; done
+cd workbench/
+cd nixos/sunflake/
+git status 
+...
+ls
+cd nixos/sunflake/
+vim modules/features/bash.nix 
+nixsw
