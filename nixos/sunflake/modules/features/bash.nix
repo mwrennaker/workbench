@@ -77,14 +77,14 @@
           __exit_colored() {
             local exit=$?
             if [ $exit -eq 0 ]; then
-              echo -n "\[\e[32m\]✓\[\e[0m\]"
+              echo -n '\[\e[32m\]✓\[\e[0m\]'
             else
-              echo -n "\[\e[31m\]✗ $exit\[\e[0m\]"
+              echo -n '\[\e[31m\]✗ $exit\[\e[0m\]'
             fi
           }
 
-            PS1="\[\e[36m\]┌[\[\e[32m\]\u\[\e[36m\]@\[\e[35m\]\H\[\e[36m\]]-[\[\e[34m\]\w\[\e[36m\]]$(parse_git)\[\e[0m\]\n"
-            PS1+="\[\e[36m\]└─[$(__exit_colored)\[\e[36m\]]>\[\e[0m\] "
+            PS1='\[\e[36m\]┌[\[\e[32m\]\u\[\e[36m\]@\[\e[35m\]\H\[\e[36m\]]-[\[\e[34m\]\w\[\e[36m\]]$(parse_git)\[\e[0m\]\n'
+            PS1+='\[\e[36m\]└─[$(__exit_colored)\[\e[36m\]]>\[\e[0m\] '
         '';
       };
 
