@@ -47,21 +47,44 @@
         # logoutExtra = '''';
 
         bashrcExtra = ''
-          # .bashrc
+            # .bashrc
 
-          # Source global definitions
-          if [ -f /etc/bashrc ]; then
-            . /etc/bashrc
-          fi
+            # Source global definitions
+            if [ -f /etc/bashrc ]; then
+              . /etc/bashrc
+            fi
 
-          # User specific environment
-          if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-            PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-          fi
-          export PATH
+            # User specific environment
+            if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+              PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+            fi
+            export PATH
 
-          # Custom Prompt (PS1)
-          PS1='\[\e[36m\]$?\[\e[0m\] \[\e[92m\]\u󰞦\[\e[95m\]\H\[\e[0m\] \[\e[95m\]>\[\e[0m\] \[\e[94m\]\w\[\e[0m\] \[\e[95m\]<\[\e[0m\] \[\e[94m\]\A\[\e[0m\] \[\e[95m\]>\[\e[0m\] '
+            # Git info for prompt
+          __git_info() {
+            local branch=$(git branch 2>/dev/null | grep '*' | sed 's/* //')
+            [ -z "$branch" ] && return
+
+            local staged=$(git diff --cached --numstat 2>/dev/null | wc -l)
+            local unstaged=$(git diff --numstat 2>/dev/null | wc -l)
+
+            echo -n " \[\e[33m\] $branch\[\e[0m\]"
+            [ $staged -gt 0 ] && echo -n " \[\e[32m\] +$staged\[\e[0m\]"
+            [ $unstaged -gt 0 ] && echo -n " \[\e[31m\]!$unstaged\[\e[0m\]"
+          }
+
+          # Dynamic exit status color
+          __exit_colored() {
+            local exit=$?
+            if [ $exit -eq 0 ]; then
+              echo -n "\[\e[32m\]✓\[\e[0m\]"
+            else
+              echo -n "\[\e[31m\]✗ $exit\[\e[0m\]"
+            fi
+          }
+
+            PS1="\[\e[36m\]┌[\[\e[32m\]\u\[\e[36m\]@\[\e[35m\]\H\[\e[36m\]]-[\[\e[34m\]\w\[\e[36m\]]$(__git_info)\[\e[0m\]\n"
+            PS1+="\[\e[36m\]└─[$(__exit_colored)\[\e[36m\]]\[\e[0m\] "
         '';
       };
 
