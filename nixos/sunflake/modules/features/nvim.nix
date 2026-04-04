@@ -184,7 +184,7 @@
           }
         ];
 
-        extraLuaConfig = ''
+        initLua = ''
           -- leader
           vim.g.mapleader      = " "
           vim.g.maplocalleader = " "
