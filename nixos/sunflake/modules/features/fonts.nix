@@ -80,7 +80,7 @@
       fonts.fontconfig = {
         enable = true;
 
-        defaltFonts = {
+        defaultFonts = {
           serif = [ "libre-baskerville" ];
           sansSerif = [ "dm-sans" ];
           monospace = [ "dm-mon" ];
