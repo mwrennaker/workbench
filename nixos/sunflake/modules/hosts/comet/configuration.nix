@@ -37,6 +37,7 @@
           self.homeModules.de
           self.homeModules.noctalia
           self.homeModules.nvim
+          self.homeModules.bash
         ];
       };
       home-manager.users.comet = import ../../../home/comet.nix;

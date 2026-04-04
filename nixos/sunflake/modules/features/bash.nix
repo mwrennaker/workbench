@@ -20,8 +20,11 @@
           lsr = "ls -alR";
 
           #nixOS
-          nixsw = "cd ~/workbench/nixos/sunflake/ && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#sunvarPC";
-          nixup = "cd ~/workbench/nixos/sunflake/ && nix flake update && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#sunvarPC";
+          nixsw-sunvar = "cd ~/workbench/nixos/sunflake/ && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#sunvarPC";
+          nixup-sunvar = "cd ~/workbench/nixos/sunflake/ && nix flake update && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#sunvarPC";
+
+          nixsw-comet = "cd ~/workbench/nixos/sunflake/ && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#comet";
+          nixup-comet = "cd ~/workbench/nixos/sunflake/ && nix flake update && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#comet";
 
           nixclean = "sudo nix-collect-garbage -d";
 
