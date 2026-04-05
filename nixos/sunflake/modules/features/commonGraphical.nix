@@ -11,7 +11,6 @@
         self.nixosModules.noctalia
         self.nixosModules.stylix
         self.nixosModules.fonts
-        inputs.home-manager.nixosModules.home-manager
       ];
 
       # Common packages
