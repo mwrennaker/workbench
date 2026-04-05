@@ -12,7 +12,7 @@
       ];
 
       networking.hostName = "comet";
-      nix.settings.max-jobs = 2;
+      nix.settings.max-jobs = 1;
       nix.settings.cores = 2;
 
       systemd.services.nix-daemon.serviceConfig = {
