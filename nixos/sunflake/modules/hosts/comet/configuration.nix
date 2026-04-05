@@ -12,6 +12,13 @@
       ];
 
       networking.hostName = "comet";
+      nix.settings.max-jobs = 2;
+      nix.settings.cores = 2;
+
+      systemd.services.nix-daemon.serviceConfig = {
+        MemoryHigh = "5G"; # Throttles the process when it reaches 5GB
+        MemoryMax = "6G"; # Forcefully kills/limits the process at 6GB
+      };
 
       # Define a user account. Don't forget to set a password with ‘passwd’.
       users.users.comet = {
