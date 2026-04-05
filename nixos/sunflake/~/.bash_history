@@ -122,3 +122,56 @@ nixsw
 git pull
 nixsw 
 ls fakefile
+cd workbench/nixos/sunflake/
+ls
+...
+ls
+git add -A
+git status
+git commit 
+..
+ls fake
+printf "\e[48;5;196m \u \e[0m\e[48;5;46m \w \e[0m\e[48;5;226m main \e[0m\n\$ "
+cd workbench/nixos/sunflake/
+vim modules/features/bash.nix 
+exa
+nix run github:eza-community/eza
+vim modules/features/common.nix 
+nixsw-sunvar 
+eza
+eza -1
+eza -l
+eza -lT
+eza -lR
+eza -lRT
+eza -l --icons=auto
+eza -lT --icons=auto
+eza -lT --icons=auto --color-scale-mode=gradient
+eza -lT --icons=auto
+eza -l --icons=auto
+vim modules/features/bash.nix 
+nix run bat
+nix shell -p bat
+nix-shell -p bat
+bat
+ls
+bat flake.nix 
+bat flake.lock 
+cliphist --help
+cliphist list
+wl-copy --help 
+wl-paste --help 
+wl-paste
+$(wl-paste)
+paste
+paste --help
+cd
+;s
+ls
+cd countertop/
+ls
+ls nixos/
+vim ~/workbench/nixos/sunflake/modules/features/bash.nix 
+nixsw-sunvar 
+cd workbench/nixos/sunflake/
+bat flake.nix 
