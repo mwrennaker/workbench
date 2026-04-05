@@ -121,3 +121,4 @@ ls
 nixsw
 git pull
 nixsw 
+ls fakefile
