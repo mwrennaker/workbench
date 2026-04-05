@@ -25,6 +25,7 @@
 
       programs.ssh.startAgent = true;
       services.upower.enable = true;
+      servics.power-profiles-daemon.enable = true;
 
       home-manager.extraSpecialArgs = {
         inherit inputs;
