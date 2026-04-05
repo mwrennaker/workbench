@@ -8,7 +8,7 @@
         enableCompletion = true;
 
         historyControl = [ "ignoredups" ];
-        historyFile = "~/.bash_history";
+        historyFile = "$XDG_STATE_HOME/bash/.bash_history";
 
         shellAliases = {
           # navigation
