@@ -1,7 +1,6 @@
 {
   self,
   inputs,
-  nixos-hardware,
   ...
 }:
 {
@@ -11,11 +10,11 @@
     specialArgs = {
       inherit inputs self;
       primaryUser = "comet";
+      nixos-hardware = inputs.nixos-hardware;
     };
 
     modules = [
       self.nixosModules.cometConfiguration
-      nixos-hardware.nixosModules.dell-latitude-7390
     ];
 
   };

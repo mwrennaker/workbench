@@ -9,6 +9,7 @@
         self.nixosModules.commonConfig
         self.nixosModules.commonGraphicalConfig
         self.nixosModules.cometHardware
+        inputs.nixos-hardware.nixosModules.dell-latitude-7390
       ];
 
       networking.hostName = "comet";
