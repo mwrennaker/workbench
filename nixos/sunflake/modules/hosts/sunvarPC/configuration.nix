@@ -7,6 +7,7 @@
     {
       imports = [
         self.nixosModules.commonConfig
+        self.nixosModules.commonGraphicalConfig
         self.nixosModules.sunvarPCHardware
         self.nixosModules.steam
       ];

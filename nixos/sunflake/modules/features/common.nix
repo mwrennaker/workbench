@@ -8,12 +8,6 @@
         self.nixosModules.boot
         self.nixosModules.localization
         self.nixosModules.syncthing
-        self.nixosModules.x11
-        self.nixosModules.de
-        self.nixosModules.audio
-        self.nixosModules.noctalia
-        self.nixosModules.stylix
-        self.nixosModules.fonts
         inputs.home-manager.nixosModules.home-manager
       ];
 
@@ -31,10 +25,6 @@
 
       # Common packages
       environment.systemPackages = with pkgs; [
-        # gui
-        obsidian
-        signal-desktop
-
         # cli
         vim
         git
@@ -46,9 +36,6 @@
         ripgrep
         eza
       ];
-
-      # Common programs
-      programs.firefox.enable = true;
 
       # Home Manager shared settings
       home-manager.useGlobalPkgs = true;
