@@ -19,7 +19,7 @@
           python3 # python interpreter
 
           # formatters
-          nixfmt-rfc-style # nix
+          nixfmt
           rustfmt # rust
           clang-tools # c
           python3Packages.pylint # python linter
