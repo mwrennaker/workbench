@@ -16,8 +16,8 @@
           "..." = "cd ../..";
           "...." = "cd ../../../";
 
-          ls = "ls -al";
-          lsr = "ls -alR";
+          ls = "eza -al --icons=auto";
+          lsr = "eza -alT --icons=auto";
 
           #nixOS
           nixsw-sunvar = "cd ~/workbench/nixos/sunflake/ && git add -A && git commit; git push; sudo nixos-rebuild switch --flake .#sunvarPC";
