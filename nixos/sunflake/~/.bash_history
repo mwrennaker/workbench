@@ -81,3 +81,43 @@ ls
 cd nixos/sunflake/
 vim modules/features/bash.nix 
 nixsw
+cd workbench/
+ls
+cd nixos/sunflake/
+vim modules/features/bash.nix 
+echo "[\e[48;5;33m\]"
+printf "\e[48;5;32m This is color 32 (blue) \e[0m\n"
+printf "\e[48;5;124m This is color 32 (blue) \e[0m\n"
+printf "\e[48;5;33m This is color 32 (blue) \e[0m\n"
+printf "\e[48;5;240m This is color 32 (blue) \e[0m\n"
+printf "\e[48;5;32m This is color 32 (blue) \e[0m\n"
+printf "\e[38;5;32m\e[48;5;32mThis is color 32 (blue)\e[0m\n\e[30;5;32m"
+printf "\e[38;5;32m\e[48;5;32mThis is color 32 (blue)\e[0m\e[30;5;32m"
+printf "\e[38;5;32m\e[48;5;32mThis is color 32 (blue)\e[0m\e[38;5;32m"
+printf "\e[38;5;32m\e[38;5;31m\e[48;5;32mThis is color 32 (blue)\e[0m\e[38;5;32m"
+printf "\[\e[48;5;32m\] \u \[\e[0m\]\[\e[48;5;33m\]\[\e[48;5;33m\]"
+printf "\[\e[48;5;32m\] stuff \[\e[0m\]\[\e[48;5;33m\]\[\e[48;5;33m\]"
+printf "\e[48;5;32m user \e[0m\n"
+printf "\e[48;5;32m user \e[0m\e[48;5;240m ~/projects \e[0m\e[48;5;33m main \e[0m\n"
+printf "\e[48;5;32m\e[38;5;0m user \e[0m\e[48;5;240m\e[38;5;15m ~/projects \e[0m\n"
+printf "\e[48;5;32m user \e[0m\e[48;5;240m ~/projects \e[0m\n"
+printf "\e[48;5;32m \u \e[0m\e[48;5;240m \w \e[0m\e[48;5;33m main \e[0m\n"
+printf "\e[48;5;32m \u \e[0m \w \$ "
+printf "\e[48;5;32m \u@\h \e[0m\e[48;5;240m \w \e[0m\e[48;5;33m main \e[0m\n\$ "
+printf "\e[48;5;32m \u@\h \e[0m\e[48;5;240m \w \e[0m\n\e[48;5;236m \A \e[0m\$ "
+printf "\e[31mThis uses your terminal's red color\e[0m\n"
+printf "\e[41mRed background (uses your terminal's red)\e[0m\n"
+echo "=== Your Terminal's Color Scheme ==="
+echo ""
+echo "Standard colors:"
+for i in {30..37}; do     printf "\e[${i}m %3d: Text color %d\e[0m\n" $i $i; done
+echo ""
+echo "Bright colors:"
+for i in {90..97}; do     printf "\e[${i}m %3d: Text color %d\e[0m\n" $i $i; done
+echo ""
+echo "Background colors:"
+for i in {40..47} {100..107}; do     printf "\e[${i}m %3d: Background %d \e[0m\n" $i $i; done
+ls
+nixsw
+git pull
+nixsw 
