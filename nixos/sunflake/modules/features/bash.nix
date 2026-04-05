@@ -63,6 +63,8 @@
             fi
             export PATH
 
+            ssh-add -l | grep -q "The agent has no identities" && ssh-add
+
             # Git info for prompt
           __parse_git() {
             local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
