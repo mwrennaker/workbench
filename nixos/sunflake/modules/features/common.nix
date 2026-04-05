@@ -44,7 +44,7 @@
         wl-clipboard
         cliphist
         ripgrep
-
+        eza
       ];
 
       # Common programs
