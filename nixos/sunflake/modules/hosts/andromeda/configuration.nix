@@ -29,7 +29,6 @@
         ];
         openssh.authorizedKeys.keys = [
           # Add your SSH public key here
-          "ssh-ed25519 AAAAC3... user@workstation"
         ];
       };
     };
