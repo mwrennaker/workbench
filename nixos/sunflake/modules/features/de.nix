@@ -13,7 +13,6 @@
       programs.regreet.settings = {
         background = {
           path = "/usr/share/backgrounds/greeter.jpg";
-          fit = "Fill";
         };
       };
 
