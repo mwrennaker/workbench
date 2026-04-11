@@ -28,6 +28,7 @@
         # cli
         vim
         git
+        unzip
         efibootmgr
         fastfetch
         broot
