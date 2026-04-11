@@ -21,7 +21,7 @@
 
       hardware.graphics = {
         enable = true;
-        extraPackages = [ pkgs.intel-media-driver ];
+        extraPackages = [ pkgs.mesa ];
       };
 
       networking.hostName = "sunvarPC"; # Define your hostname.
