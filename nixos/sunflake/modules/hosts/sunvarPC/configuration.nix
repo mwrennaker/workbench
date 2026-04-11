@@ -19,6 +19,11 @@
         "amdgpu.deep_color=0"
       ]; # hopefully a workaround to help my monitor for now
 
+      hardware.graphics = {
+        enable = true;
+        extraPackages = [ pkgs.intel-media-driver ];
+      };
+
       networking.hostName = "sunvarPC"; # Define your hostname.
 
       # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -33,6 +38,7 @@
 
       environment.systemPackages = with pkgs; [
         vintagestory
+        inputs.chroma.packages.${system}.default
       ];
 
       home-manager.extraSpecialArgs = {

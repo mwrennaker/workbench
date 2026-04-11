@@ -36,6 +36,7 @@
         cliphist
         ripgrep
         eza
+        kew
       ];
 
       # Home Manager shared settings
