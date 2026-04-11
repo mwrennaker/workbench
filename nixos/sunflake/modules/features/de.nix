@@ -109,6 +109,7 @@
       xdg.userDirs = {
         enable = true;
         createDirectories = false;
+        setSessionVariables = true;
         desktop = "$HOME/countertop/desk";
         documents = "$HOME/countertop";
         download = "$HOME/quarantine";
