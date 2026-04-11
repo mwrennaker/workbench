@@ -38,7 +38,7 @@
 
       environment.systemPackages = with pkgs; [
         vintagestory
-        inputs.chroma.packages.${system}.default
+        inputs.chroma.packages.${system}.term-shader-audio
       ];
 
       home-manager.extraSpecialArgs = {
