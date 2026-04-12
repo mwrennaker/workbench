@@ -18,6 +18,7 @@
         # gui
         obsidian
         signal-desktop
+        protonvpn-gui
 
       ];
 
