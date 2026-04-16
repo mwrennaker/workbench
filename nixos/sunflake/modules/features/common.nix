@@ -37,6 +37,9 @@
         ripgrep
         eza
         kew
+
+        # languages
+        jdk21_headless
       ];
 
       # Home Manager shared settings
