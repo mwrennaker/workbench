@@ -11,6 +11,10 @@
         self.nixosModules.sunvarPCHardware
         self.nixosModules.steam
       ];
+      #switch rules
+      services.udev.extraRules = ''
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="0955", MODE="0666", GROUP="users"
+      '';
 
       boot.kernelPackages = pkgs.linuxPackages_latest;
       boot.kernelParams = [
