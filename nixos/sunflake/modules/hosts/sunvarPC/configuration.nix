@@ -10,6 +10,7 @@
         self.nixosModules.commonGraphicalConfig
         self.nixosModules.sunvarPCHardware
         self.nixosModules.steam
+        self.nixosModules.sunshine
       ];
       #switch rules
       services.udev.extraRules = ''
