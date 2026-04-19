@@ -37,6 +37,7 @@
         ripgrep
         eza
         kew
+        p7zip
 
         # languages
         jdk21_headless
