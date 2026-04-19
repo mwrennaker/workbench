@@ -19,6 +19,7 @@
         obsidian
         signal-desktop
         protonvpn-gui
+        dolphin-emu
 
       ];
 
