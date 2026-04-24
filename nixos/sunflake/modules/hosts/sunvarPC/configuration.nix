@@ -56,7 +56,7 @@
             scale = "1";
           };
           "HDMI-A-2" = {
-            position = "1920 0";
+            position = "3840 0";
           };
         };
         homeModules = [
