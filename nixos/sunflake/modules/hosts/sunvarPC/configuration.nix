@@ -53,7 +53,7 @@
         outputs = {
           "DP-2" = {
             position = "0 0";
-            scale = "2";
+            scale = "1";
           };
           "HDMI-A-2" = {
             position = "1920 0";
