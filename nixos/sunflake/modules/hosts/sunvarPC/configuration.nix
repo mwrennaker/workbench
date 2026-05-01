@@ -45,7 +45,6 @@
       environment.systemPackages = with pkgs; [
         vintagestory
         libreoffice
-        inputs.chroma.packages.${pkgs.stdenv.hostPlatform.system}.term-shaders-audio
       ];
 
       home-manager.extraSpecialArgs = {
