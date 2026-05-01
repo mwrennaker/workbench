@@ -45,6 +45,7 @@
       environment.systemPackages = with pkgs; [
         vintagestory
         libreoffice
+        protonup-ng
       ];
 
       home-manager.extraSpecialArgs = {
