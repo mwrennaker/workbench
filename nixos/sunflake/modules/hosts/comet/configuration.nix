@@ -9,6 +9,7 @@
         self.nixosModules.commonConfig
         self.nixosModules.commonGraphicalConfig
         self.nixosModules.cometHardware
+        self.nixosModules.steam
         inputs.nixos-hardware.nixosModules.dell-latitude-7390
       ];
 
