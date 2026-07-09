@@ -11,6 +11,7 @@
         self.nixosModules.sunvarPCHardware
         self.nixosModules.steam
         self.nixosModules.sunshine
+        self.nixosModules.sunshineVirtualDisplay
       ];
       #switch rules
       services.udev.extraRules = ''
