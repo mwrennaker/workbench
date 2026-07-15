@@ -9,9 +9,8 @@
         capSysAdmin = true;
         openFirewall = true;
 
-        settings = {
-          origin_pin = "pin"; # Set your web UI password here
-          channels = [
+        applications = {
+          apps = [
             {
               name = "Steam";
               cmd = "steam steam://open/bigpicture";
