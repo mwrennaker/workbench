@@ -27,11 +27,14 @@
       programs.noctalia = {
         enable = true;
       };
-      xdg.configFile."noctalia/settings.json" = lib.mkForce {
-        force = true;
-        source = pkgs.writeText "noctalia-config" (
-          builtins.toJSON ((builtins.fromJSON (builtins.readFile noctaliaConfig)))
-        );
-      };
+      /*
+        xdg.configFile."noctalia/settings.json" = lib.mkForce {
+          force = true;
+          source = pkgs.writeText "noctalia-config" (
+            builtins.toJSON ((builtins.fromJSON (builtins.readFile noctaliaConfig)))
+          );
+        };
+      */
+      settings = noctaliaConfig;
     };
 }
