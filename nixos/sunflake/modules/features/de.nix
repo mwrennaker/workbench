@@ -87,7 +87,7 @@
               "${mod}+Return" = "exec ghostty";
               "${mod}+Shift+q" = "kill";
 
-              "${mod}+d" = "exec noctalia-shell ipc call launcher toggle";
+              "${mod}+d" = "exec noctalia msg panel-toggle launcher";
 
               "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
               "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
