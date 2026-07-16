@@ -26,6 +26,8 @@
       ];
       programs.noctalia = {
         enable = true;
+        settings = builtins.fromTOML (builtins.readFile noctaliaConfig);
+
       };
       /*
         xdg.configFile."noctalia/settings.json" = lib.mkForce {
@@ -35,6 +37,5 @@
           );
         };
       */
-      settings = noctaliaConfig;
     };
 }
