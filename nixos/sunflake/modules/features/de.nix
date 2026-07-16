@@ -76,7 +76,7 @@
           };
 
           startup = [
-            { command = "noctalia-shell"; }
+            { command = "noctalia"; }
           ];
 
           keybindings =
