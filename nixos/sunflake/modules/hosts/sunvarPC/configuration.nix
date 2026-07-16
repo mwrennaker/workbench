@@ -51,7 +51,7 @@
 
       home-manager.extraSpecialArgs = {
         inherit inputs;
-        noctaliaConfig = ../../features/noctalia-sunvarPC.json;
+        noctaliaConfig = ../../features/noctalia-sunvarPC.toml;
         outputs = {
           "DP-2" = {
             position = "0 0";
