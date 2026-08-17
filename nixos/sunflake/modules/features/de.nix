@@ -19,8 +19,13 @@
 
       security.polkit.enable = true; # allows communication with protected files under restrictions without sudo
       programs.sway.enable = true;
-      xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+      xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
       xdg.portal.enable = true;
+      xdg.portal.wlr.enable = true;
+      config.sway.default = [
+        "wlr"
+        "gtk"
+      ];
 
     };
 
