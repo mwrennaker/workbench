@@ -22,7 +22,7 @@
       xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
       xdg.portal.enable = true;
       xdg.portal.wlr.enable = true;
-      xdg.portal.config.sway.default = [
+      xdg.portal.config.sway.default = lib.mkForce [
         "wlr"
         "gtk"
       ];
