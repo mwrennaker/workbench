@@ -20,6 +20,7 @@
         signal-desktop
         protonvpn-gui
         dolphin-emu
+        gimp
 
       ];
 
