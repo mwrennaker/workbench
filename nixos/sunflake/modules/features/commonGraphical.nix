@@ -22,6 +22,8 @@
         dolphin-emu
         gimp
 
+        prismlauncher
+
       ];
 
       # Common programs
