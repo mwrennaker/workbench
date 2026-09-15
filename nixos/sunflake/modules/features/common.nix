@@ -38,6 +38,7 @@
         eza
         kew
         p7zip
+        nethack
 
         # languages
         jdk21_headless
