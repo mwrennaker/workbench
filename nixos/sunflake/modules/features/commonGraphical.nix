@@ -23,6 +23,7 @@
         gimp
 
         prismlauncher
+        discord
 
       ];
 
