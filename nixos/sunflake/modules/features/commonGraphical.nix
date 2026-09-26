@@ -25,6 +25,8 @@
         prismlauncher
         discord
 
+        pokemmo-installer
+
       ];
 
       # Common programs
