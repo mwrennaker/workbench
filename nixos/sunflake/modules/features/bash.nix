@@ -29,7 +29,7 @@
           nixclean = "sudo nix-collect-garbage -d";
 
           # games
-          mnmsetup = "cd ~/countertop/Games/Monsters & Memories/linux/ && LD_PRELOAD=$(nix eval --raw nixpkgs#wayland.outPath)/lib/libwayland-client.so nix run nixpkgs#appimage-run -- ./MonstersAndMemories_amd64.AppImage";
+          mnmsetup = "cd ~/countertop/Games/'Monsters & Memories'/linux/ && LD_PRELOAD=$(nix eval --raw nixpkgs#wayland.outPath)/lib/libwayland-client.so nix run nixpkgs#appimage-run -- ./MonstersAndMemories_amd64.AppImage";
           mnmtoken = "cd ~/.local/share/com.monstersandmemories.launcher/ && nix run nixpkgs#sqlite -- launcher.db 'select value from settings where variable='token';' | wl-copy";
 
         };
