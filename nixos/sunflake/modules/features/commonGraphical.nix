@@ -22,6 +22,7 @@
         dolphin-emu
         pokemmo-installer
 
+        discord
       ];
 
       # Common programs
