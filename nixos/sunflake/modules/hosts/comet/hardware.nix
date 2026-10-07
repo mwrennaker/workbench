@@ -16,21 +16,22 @@ flake.nixosModules.cometHardware =
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/8d670776-04ba-45a0-b034-9916c2b6643e";
+    { device = "/dev/disk/by-uuid/42071d74-2bb8-47b3-9dfa-1df16231fecc";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/C5A6-A80D";
+    { device = "/dev/disk/by-uuid/F897-69F3";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6e10b8df-ed4a-4bcb-9293-2c38f19e4b1b"; }
+    [ { device = "/dev/disk/by-uuid/28cea4fa-6afa-4c7a-ac2a-e9690bd5c0ec"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 };
+
 }

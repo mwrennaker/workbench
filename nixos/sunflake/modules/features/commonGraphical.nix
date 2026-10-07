@@ -27,6 +27,7 @@
 
         pokemmo-installer
 
+        discord
       ];
 
       # Common programs
